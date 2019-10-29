@@ -5,12 +5,13 @@ import {
     lazyMemorySignalTransportFactory,
     createMemorySharedSyncLog,
 } from './index.tests'
-import { SYNC_STORAGE_AREA_KEYS, INCREMENTAL_SYNC_FREQUENCY } from './constants'
+import { INCREMENTAL_SYNC_FREQUENCY } from './constants'
 import SyncBackground from '.'
 import { withEmulatedFirestoreBackend } from '@worldbrain/storex-backend-firestore/lib/index.tests'
 import { SharedSyncLogStorage } from '@worldbrain/storex-sync/lib/shared-sync-log/storex'
 import { RUN_FIRESTORE_TESTS } from 'src/tests/constants'
-import { getStorageContents } from 'src/storage/utils'
+import { SYNC_STORAGE_AREA_KEYS } from '@worldbrain/memex-common/lib/sync/constants'
+import { getStorageContents } from '@worldbrain/memex-common/lib/storage/utils'
 
 interface TestSetup {
     setups: [BackgroundIntegrationTestSetup, BackgroundIntegrationTestSetup]
